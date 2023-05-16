@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>VForU-Calorie Counter</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+<link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"></link>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #1F1E1E;
+}
+/* Navigation Bar */
+#navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/*Logo and Image */
+#logo{
+margin: 10px 34px;
+}
+#logo img{
+    height: 70px;
+margin: 3px 6px;
+}
+/*list styling*/
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color:  #0a1a1e;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: rgb(244, 77, 6);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#navbar ul li a:hover{
+  color: rgb(2, 30, 46);
+  background: rgb(255, 58, 3);
+    cursor: pointer;
+}
+
+    .CalculateForm
+	{
+	    text-transform:uppercase;
+        
+		
+	}
+			
+    .form-control, .form-select, .card, .btn
+    {
+        border-radius: 15px;
+				
+    }
+
+    .form-control, .form-select
+    {
+        background: none;
+        color: #fff;
+		background-color:#1F1E1E;
+    }
+
+    
+
+    input[type=checkbox], input[type=radio]
+    {
+        width: 23px;
+        height: 23px;
+        display: inline-block;
+        top: 0;
+		-webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: relative;
+        border: 1px solid #ffffff;
+        overflow: hidden;
+					
+    }
+
+    input[type=checkbox]
+    {
+        border-radius: 3px;
+    }
+
+    input[type=radio]
+    {
+        border-radius: 100%;
+    }
+
+
+
+    input[type=checkbox]:checked:after, input[type=radio]:checked:after
+    {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        left: 0;
+        position:absolute;
+        top:0;
+        font-size: 15px;
+        color: #000;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+	
+
+
+</style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logovforu.jpg" alt="VForU.com">
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="webstories.html"> Webstories</a></li>
+            <li><a href="bmicalc.html">BMI Calculator</a></li>
+            <li><a href="calorie_calc.html">Calorie Calculator</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="signin.html">SignIn</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+
+        </ul>
+    </nav>
+<div class="container my-5">
+<form class="CalculateForm" method="post">
+<div class="card bg-dark text-white">
+    <h4 class="text-center text-danger card-header mb-4">Calorie Calculator</h4>
+    <div class="card-body">
+        <div class="row g-5">
+            <div class="col-sm-6">
+                <div>
+                    <h5>Age*</h5>
+                    <input class="form-control text-end" name="age" required="" type="number" value="0" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <h5>Gender*</h5>
+                    <div class="form-control">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center">
+                                <input  id="gender_male" name="gender" required="" type="radio" value="0" />
+                                <label class="ms-2">Male</label>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <input id="gender_female" name="gender" required="" type="radio" value="1" />
+                                <label class="ms-2">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+
+
+            <div class="col-sm-6">
+                <div>
+                    <h5>Height*</h5>
+                    <div class="d-flex align-items-center">
+                        <input class="form-control text-end" name="height" required="" type="number" value="0" />
+                        <span class="btn ms-1 bg-warning text-nowrap">cm</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <h5>Weight*</h5>
+                    <div class="d-flex align-items-center">
+                        <input class="form-control text-end" name="weight" required="" type="number" value="0" />
+                        <span class="btn ms-1 bg-warning text-nowrap">kg</span>
+                    </div>
+                </div>
+            </div >
+            <div class="col-sm-8">
+                <h5>Activity*</h5>
+                <select class="form-select" name="activity" required="">
+                    <option value="1">Basal Metabolic Rate (BMR)</option>
+                    <option value="1.2">Sedentary: little or no exercise</option>
+                    <option value="1.375">Light: exercise 1-3 times/week</option>
+                    <option selected="" value="1.465">Moderate: exercise 4-5 times/week</option>
+                    <option value="1.55">Active: daily exercise or intense exercise 3-4 times/week</option>
+                    <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+                    <option value="1.9">Extra Active: very intense exercise daily, or physical job</option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    <h5>Result Unit*</h5>
+                    <div class="form-control">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center">
+                                <input  id="unit_calories" name="unit" required="" type="radio" value="Calories" />
+                                <label class="ms-2">Calories</label>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <input id="unit_kilo" name="unit" required="" type="radio" value="kilojoules" />
+                                <label class="ms-2">kilojoules</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="ans_calculate"></div>
+
+        <div class="text-center mt-4 card-footer">
+            <button class="btn btn-success" onclick="calculateCalorie(this)" type="button">
+                <i class="fas fa-calculator me-3"></i>
+                    Calculate
+            </button>
+		    
+		    <button class="btn btn-success" onclick="Clear(this)" type="button">
+                Clear
+            </button>
+        </div>
+    
+
+	
+</div>
+</form>
+			
+
+    
+
+</div>
+<script>
+  
+    function calculateCalorie(obj)
+    {   
+
+        const age = obj.form.age.value;
+        const gender = obj.form.gender.value;
+        const height = obj.form.height.value;
+        const weight = obj.form.weight.value;
+        const activity = obj.form.activity.value;
+        const unit = obj.form.unit.value;
+
+        let BMR = Mifflin(gender, age, height, weight);
+
+        let ret = parseFloat(BMR)*parseFloat(activity);
+		
+        if(unit == 'kilojoules')
+            {
+                ret = (ret*4.1868);
+            }
+
+        document.querySelector(".ans_calculate").innerHTML = '<div class="container"><h4 class="text-center form-control my-3 text-danger fs-4">You should consume <span class="text-white">'+Math.ceil(ret)+' '+unit+'/day </span> of calorie to maintain your weight.</h4></div>';
+	
+	}
+
+    function Mifflin(gender, age, height, weight)
+    {
+        let BMR = (10*weight) + (6.25*height) - (5*age) + 5;
+        if(gender == 1) // Female
+        {
+            BMR = (10*weight) + (6.25*height) - (5*age) - 161;
+        }
+
+        return BMR;
+    }
+	
+	function clear()
+	{
+	    document.getElementById(".ans_calculate").innerHTML="";
+		document.getElementById(".form-control text-end").innerHTML="";
+		
+	}
+               
+</script>
+</body>
+</html>

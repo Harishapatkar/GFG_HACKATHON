@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Navigation Bar */
+#navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/*Logo and Image */
+#logo{
+margin: 10px 34px;
+}
+#logo img{
+    height: 70px;
+margin: 3px 6px;
+}
+/*list styling*/
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color:  #0a1a1e;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: rgb(244, 77, 6);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: rgb(2, 30, 46);
+    background: rgb(255, 58, 3);
+    cursor: pointer;
+}
+/*homesection*/
+#home{
+    height: 628px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background: url(bg1.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.80;
+    height: 628px;
+}
+#home h1{
+    color:black;
+    text-align: center;
+    
+}
+#home p{
+    color: black;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    cursor: default;
+}
+/*utility class*/
+.h-primary{
+    font-size: 60px;
+    padding: 12px;
+}
+.btn{
+    background-color: #092f38;
+   
+}
+.customize{
+    padding: 6px 20px;
+    border: 4px solid rgb(0, 24, 31);
+    background-color: #072f2a;
+    color: rgb(244, 77, 6);
+    margin: 20px;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    
+}

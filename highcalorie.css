@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Navigation Bar */
+#navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/*Logo and Image */
+#logo{
+margin: 10px 34px;
+}
+#logo img{
+    height: 70px;
+margin: 3px 6px;
+}
+/*list styling*/
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color:  #0a1a1e;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: rgb(244, 77, 6);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: rgb(2, 30, 46);
+    background: rgb(255, 58, 3);
+    cursor: pointer;
+}
+
+#calories{
+	background: url(caloriebg.jpg) no-repeat center center/cover;
+	padding-left: 55px;
+	padding-bottom: 55px;
+	text-align: center;
+    height: 555px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(185, 187, 190);
+}
+
+#highcalories .box{
+    border: 4px solid #110000;
+    padding: 34px;
+    margin: 2px 3px;
+    border-radius: 23px;
+    background-color: #161616;
+    color: rgb(139, 137, 137) ;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+
+}
+table{
+	opacity: 1;
+	background-color: white;
+	margin: auto;
+}
+
+
+table thead tr th{
+	height: 20px;
+	padding: 5px;
+}
+
+table tbody tr td{
+    letter-spacing: 0.35px;
+    padding: 2px;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#highcalories{
+
+	text-align: left;
+	
+}
+
+.list{
+	padding-left: 40px;
+
+}
+.intro{
+	text-align: center;
+}
+
+.heading{
+	font-style: bold;
+	font-size: 40px;
+}
+
+
+.sub-heading{
+	font-size: 30px;
+}
+.h-primary{
+    font-size: 25px;
+    padding: 12px;
+    font-size: 40px;
+    text-align: center;
+}

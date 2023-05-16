@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/*Logo and Image */
+#logo{
+margin: 10px 34px;
+}
+#logo img{
+    height: 70px;
+margin: 3px 6px;
+}
+/*list styling*/
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color:  #031d21;;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: rgb(255, 72, 0);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#navbar ul li a:hover{
+    color: rgb(1, 21, 28);
+    background: rgb(255, 106, 0);
+    cursor: pointer;
+}
+table{
+	width: 40%;
+	height: 75%;
+	margin: auto;
+    border: 6px solid rgb(23, 0, 0);
+ 
+    border-radius: 10px;
+}
+
+.time{
+text-align: center;
+background-color: #250404;
+width: 80px;
+height: 30px;
+color: #bdc4d2;
+
+}
+
+.heading{
+	text-align: center;
+    height: 30px;
+    color:Black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.day{
+	background-color:#250404;
+	height: 20px;
+	text-transform: uppercase;
+	color: #B6B6B4;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.table-container{
+    padding: 0 10%;
+    margin: 40px auto 0;
+
+}
+
+
+table thead tr th{
+    font-weight: medium;
+    
+    color: white;
+    opacity: 1;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+	
+
+}
+table tbody tr td{
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    border: 3px solid #6c6969;
+	background-color: white;
+	opacity: 1;
+}
+
+body{
+   background-image: url(gymbg.jpg);
+   background-size: cover;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+tbody{
+    background-color: #321d1d;
+}
